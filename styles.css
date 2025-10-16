@@ -1,4 +1,4 @@
-/* =====================
+/* ===================== 
    Base Resets
 ===================== */
 * {
@@ -74,7 +74,7 @@ body {
 }
 
 /* =====================
-   Hero (FIXED: Stacked Layout for all screens)
+   Hero Section
 ===================== */
 .hero { 
   position: relative;
@@ -105,7 +105,6 @@ body {
 .hero-copy { 
   position: static; 
   padding: 30px 80px; 
-  max-width: none; 
   color: #fff; 
   background-color: #000; 
   text-align: left; 
@@ -344,3 +343,258 @@ body {
   margin: 0 6px;
 }
 
+/* ================================================= */
+/*                 Media Queries                     */
+/* ================================================= */
+
+/* Desktop (>=1025px) */
+@media (min-width: 1025px) {
+  /* Desktop Header */
+  .site-header {
+    flex-direction: row; 
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  /* Home Page: Vertical Layout */
+  .page-home .site-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0; 
+  }
+
+  .page-home .site-logo {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .page-home .site-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .page-home .site-nav a {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Hero Overlay */
+  .page-home .hero-tagline-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    width: 80%;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 10;
+  }
+
+  .page-home .hero-tagline-overlay h1 {
+    font-size: 48px;
+    color: #fff;
+  }
+
+  .hero-img {
+    height: 500px;
+  }
+
+  .hero-copy {
+    padding: 40px 100px;
+    text-align: left;
+  }
+
+  .plans {
+    justify-content: flex-start;
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .page-trending .anime-item {
+    flex-direction: row;
+  }
+
+  .merch-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .site-logo {
+    height: 80px;
+  }
+
+  .site-nav ul {
+    justify-content: flex-end;
+  }
+}
+
+/* Tablet (768px – 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-img {
+    height: 350px;
+  }
+
+  .hero-copy {
+    padding: 20px 40px;
+    text-align: center; 
+  }
+
+  .hero-tagline-overlay {
+    padding: 15px 20px;
+  }
+
+  .hero-tagline-overlay h1 {
+    font-size: 32px;
+  }
+
+  .plans {
+    justify-content: center; 
+  }
+
+  .site-header {
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .logo-wrap {
+    text-align: center;
+  }
+
+  .site-logo {
+    height: 66px;
+    margin: 0 auto;
+  }
+
+  .site-nav {
+    margin-top: 4px;
+  }
+
+  .site-nav ul {
+    justify-content: center;
+    gap: 18px;
+    padding: 6px 10px;
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .page-trending .anime-item {
+    flex-direction: column;
+    padding: 24px 28px;
+    gap: 16px;
+  }
+
+  .poster {
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  .synopsis {
+    padding: 0;
+    text-align: left;
+  }
+
+  .synopsis h3 {
+    font-size: 26px;
+    text-align: left;
+    padding-top: 6px;
+  }
+
+  .merch-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile (<768px) */
+@media (max-width: 767px) {
+  .hero-img {
+    height: 250px;
+  }
+  
+  .hero-tagline-overlay h1 {
+    font-size: 24px;
+  }
+
+  .hero-copy {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .plans {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .plan {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .site-nav ul {
+    gap: 10px; 
+  }
+
+  .site-header {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .site-logo {
+    height: 58px;
+    margin: 0 auto;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 6px 12px;
+    align-items: center;
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-trending .anime-item {
+    flex-direction: column;
+    padding: 18px;
+    text-align: center;
+  }
+
+  .poster {
+    width: 92%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .synopsis {
+    padding-top: 12px;
+    text-align: center;
+  }
+
+  .synopsis p {
+    font-size: 15px;
+  }
+
+  .episodes {
+    justify-content: center;
+  }
+
+  .merch-grid {
+    grid-template-columns: 1fr;
+    width: 92%;
+    margin: 0 auto;
+  }
+}
