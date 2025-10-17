@@ -349,14 +349,12 @@ body {
 
 /* Desktop (>=1025px) */
 @media (min-width: 1025px) {
-  /* Desktop Header */
   .site-header {
     flex-direction: row; 
     justify-content: space-between;
     padding: 10px 20px;
   }
 
-  /* Home Page: Vertical Layout */
   .page-home .site-header {
     flex-direction: column;
     align-items: center;
@@ -381,7 +379,6 @@ body {
     text-align: center;
   }
 
-  /* Hero Overlay */
   .page-home .hero-tagline-overlay {
     position: absolute;
     top: 50%;
@@ -596,5 +593,62 @@ body {
     grid-template-columns: 1fr;
     width: 92%;
     margin: 0 auto;
+  }
+}
+
+/* =====================
+   Print Styles 
+===================== */
+@media print {
+  .page-trending .anime-item {
+    flex-direction: row !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .merch-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+  }
+  body, .page, .site-header, .site-footer {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+
+  * {
+    color: #000 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+
+  img {
+    filter: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .site-header,
+  nav,
+  .site-footer,
+  button,
+  .episodes-toggle {
+    display: none !important;
+  }
+
+  h1, h2, h3, p {
+    color: #000 !important;
+  }
+
+  main {
+    margin: 0 auto;
+    padding: 0;
   }
 }
