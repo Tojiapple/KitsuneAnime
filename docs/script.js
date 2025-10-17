@@ -1,9 +1,3 @@
-// ===============================
-// Stage 10: Interactivity Script
-// ===============================
-
-// 1️⃣ Example: Animation trigger using keyframes-like JS animation
-// This animates the site logo when the page loads
 window.addEventListener("load", () => {
   const logo = document.querySelector(".site-logo");
   if (logo) {
@@ -13,8 +7,6 @@ window.addEventListener("load", () => {
   }
 });
 
-// 2️⃣ Example: Using an Array, Loop, and Condition
-// Display random motivational messages in the console (or alert)
 const messages = [
   "Keep watching and enjoy anime!",
   "Believe in yourself like Naruto!",
@@ -26,14 +18,12 @@ const messages = [
 function showMessage() {
   for (let i = 0; i < messages.length; i++) {
     if (messages[i].includes("anime")) {
-      console.log("🎬 " + messages[i]); // logs only messages with the word 'anime'
+      console.log("🎬 " + messages[i]); 
     }
   }
 }
 showMessage();
 
-// 3️⃣ Example: Object and Method
-// Creating an anime object that holds info and has a method to describe itself
 const animeCharacter = {
   name: "Tanjiro Kamado",
   anime: "Demon Slayer",
@@ -43,11 +33,8 @@ const animeCharacter = {
   }
 };
 
-// Call the method automatically
 animeCharacter.describe();
 
-// 4️⃣ Bonus Interaction Example (Condition + DOM)
-// If user clicks the footer, display a message
 const footer = document.querySelector(".site-footer");
 if (footer) {
   footer.addEventListener("click", () => {
